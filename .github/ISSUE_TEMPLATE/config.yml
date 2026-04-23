@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+
+contact_links:
+
+  - name: 📖 Project Documentation
+
+    url: ./docs/
+
+    about: Please read documentation before creating an issue.
