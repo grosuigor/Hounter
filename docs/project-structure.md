@@ -2,6 +2,7 @@
 
 **HTML5** + **SCSS/BEM** + **JS** + **Vite**
 
+```
 Hounter/
 │
 ├── .github/
@@ -39,3 +40,4 @@ Hounter/
 ├── index.html
 ├── package-lock.json
 └── package.json
+```å
