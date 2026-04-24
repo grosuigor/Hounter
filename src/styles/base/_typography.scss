@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+body {
+  font-family: "Lexend", sans-serif;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
+  line-height: 1.7;
+  color: $color-grey-3;
+}
+
+$headings: (
+  h1: (
+    size: 2.5 * $default-font-size,
+    weight: $bolder-font-weight
+  ),
+  h2: (
+    size: 2 * $default-font-size,
+    weight: $bold-font-weight
+  ),
+  h3: (
+    size: 1.5 * $default-font-size,
+    weight: $semibold-font-weight
+  ),
+  h4: (
+    size: 1.25 *  $default-font-size,
+    weight: $bold-font-weight
+  )
+);
+
+@each $name, $props in $headings {
+  #{$name},
+  .#{$name} {
+    font-size: map.get($props, size);
+    font-weight: map.get($props, weight);
+    text-transform: capitalize;
+  }
+}
+
+.subtitle {
+  font-size: 1.125 * $default-font-size;
+}
+
+.text {
+  font-size: $default-font-size;
+
+  &--light {
+    font-weight: $light-font-weight;
+  }
+
+  &--bold {
+    font-weight: $bold-font-weight;
+  }
+}
+
+label, .label {
+  font-size: 0.875 * $default-font-size;
+}
+
+.label {
+  &--small {
+    font-size: 0.875 * $default-font-size;
+  }
+
+  &--medium {
+    font-weight: $semibold-font-weight;
+  }
+
+  &--bold {
+    font-weight: $bold-font-weight;
+  }
+}
