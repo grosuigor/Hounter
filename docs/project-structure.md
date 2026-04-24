@@ -2,6 +2,7 @@
 
 **HTML5** + **SCSS/BEM** + **JS** + **Vite**
 
+```
 Hounter/
 │
 ├── .github/
@@ -17,9 +18,7 @@ Hounter/
 ├── src/
 │   ├── components/
 │   ├── styles/
-│   │   ├── css/
-│   │   ├── fonts/
-│   │   └── scss/
+│   │   └── index.scss/
 │   ├── assets/
 │   └── index.js
 │
@@ -39,3 +38,4 @@ Hounter/
 ├── index.html
 ├── package-lock.json
 └── package.json
+```
