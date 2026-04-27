@@ -5,8 +5,8 @@ body {
   font-family: "Lexend", sans-serif;
   font-size: $default-font-size;
   font-weight: $default-font-weight;
-  line-height: 1.7;
-  color: $color-grey-3;
+  line-height: 1.4;
+  color: $color-black;
 }
 
 $headings: (
@@ -43,6 +43,12 @@ $headings: (
 
 .text {
   font-size: $default-font-size;
+  color: $color-grey-3;
+
+  &--small {
+    font-size: 0.75 * $default-font-size;
+  }
+
 
   &--light {
     font-weight: $light-font-weight;

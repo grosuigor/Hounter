@@ -8,30 +8,88 @@
   </head>
   <body>
     <div id="app" class="section-container section-container--landing">
-      <header class="section section--header">
-
+      <nav class="section navbar">
+        <div class="navbar__logo">
+          <img width="36" height="36" src="/public/favicon.svg" />
+          <h4 class="h4">Hounter</h4>
+        </div>
+        <div class="navbar__delimiter"></div>
+        <div class="navbar__links">
+          <button class="btn btn-white--outlined">About Us</button>
+          <button class="btn btn-white--outlined">Article</button>
+          <button class="btn btn-white--outlined">Property</button>
+          <button class="btn btn-primary-light">Sing Up</button>
+        </div>
+      </nav>
+      <header class="section header">
+        <div class="hero">
+          <h1 class="hero__title">
+            find the place to<br />
+            live <span>your dreams</span><br />
+            easily here
+          </h1>
+          <span class="text text--light"
+            >Everything you need about finding your place to live will be here,
+            where it will be easier for you</span
+          >
+          <div class="hero__searchbar">
+            <img src="/src/assets/icons/location.svg" class="icon icon--location" />
+            <input placeholder="Search for the location you want!" name="search" class="input input--complex" />
+            <button class="btn btn-primary">
+              Search
+              <img src="/src/assets/icons/chevron_right.svg" />
+            </button>
+          </div>
+          <span class="text text--light">Our Partnership</span>
+          <div class="hero__partners">
+            <img src="/src/assets/partners/traveloka.png" />
+            <img src="/src/assets/partners/tiket.png" />
+            <img src="/src/assets/partners/airbnb.png" />
+            <img src="/src/assets/partners/trip_advisor.png" />
+          </div>
+        </div>
+        <div class="stats">
+          <img class="stats__bg-image" src="/src/assets/hero_bg.png" />
+          <div class="stats__container">
+            <div class="stats__item">
+              <div class="stats__item_icons">
+                <img src="/src/assets/stats/human_1.jpg" />
+                <img src="/src/assets/stats/human_2.jpg" />
+                <img src="/src/assets/stats/human_3.jpg" />
+              </div>
+              <div class="stats__item_text">
+                <span class="text text--bold">1K+ People</span>
+                <span class="text text--small">Successfully Getting Home</span>
+              </div>
+            </div>
+            <div class="stats__item">
+              <div class="stats__item_icons">
+                <img src="/src/assets/stats/house.png" />
+              </div>
+              <div class="stats__item_text">
+                <span class="text text--bold">56 Houses</span>
+                <span class="text text--small">Sold Monthly</span>
+              </div>
+            </div>
+            <div class="stats__item">
+              <div class="stats__item_icons">
+                <img src="/src/assets/stats/human_4.jpg" />
+              </div>
+              <div class="stats__item_text">
+                <span class="text text--bold">4K+</span>
+                <span class="text text--small">People Looking for New Homes</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-      <section class="section section--featured">
-
-      </section>
-      <section class="section section--tour">
-        
-      </section>
-      <section class="section section--testimonials">
-        
-      </section>
-      <section class="section section--find-more">
-        
-      </section>
-      <section class="section section--subscribe">
-        
-      </section>
-      <section class="section section--form">
-        
-      </section>
-      <footer class="section section--footer">
-        
-      </footer>
+      <section class="section featured"></section>
+      <section class="section tour"></section>
+      <section class="section testimonials"></section>
+      <section class="section find-more"></section>
+      <section class="section subscribe"></section>
+      <section class="section form"></section>
+      <footer class="section footer"></footer>
     </div>
     <script type="module" src="/src/index.js"></script>
   </body>

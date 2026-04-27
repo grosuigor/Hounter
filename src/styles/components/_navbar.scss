@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.navbar {
+  z-index: 1000;
+  position: absolute !important;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: $color-black;
+    gap: 1rem;
+  }
+  
+
+  &__delimiter {
+    flex: 1
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    & > :last-child {
+      height: 5rem;
+    }
+  }
+}

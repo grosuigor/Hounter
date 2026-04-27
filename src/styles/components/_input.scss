@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.input {
+  width: 100%;
+  border-radius: 3rem;
+  outline: 0;
+  border: 1px solid $color-grey-1;
+  padding: 1.6rem 2.4rem;
+
+  &--complex {
+    padding-left: 6.4rem;
+  }
+}
+
+.input, .input::placeholder {
+  color: $color-grey-2;
+  font-weight: $semibold-font-weight;
+  font-size: .875 * $default-font-size;
+  line-height: 2.4rem;
+}
