@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hounter</title>
   </head>
@@ -10,15 +16,20 @@
     <div id="app" class="section-container section-container--landing">
       <nav class="section navbar">
         <div class="navbar__logo">
-          <img width="36" height="36" src="/public/favicon.svg" />
+          <img width="36" height="36" src="/favicon.svg" />
           <h4 class="h4">Hounter</h4>
         </div>
         <div class="navbar__delimiter"></div>
         <div class="navbar__links">
-          <button class="btn btn-white--outlined">About Us</button>
-          <button class="btn btn-white--outlined">Article</button>
-          <button class="btn btn-white--outlined">Property</button>
-          <button class="btn btn-primary-light">Sing Up</button>
+          <button class="btn btn--white">About Us</button>
+          <button class="btn btn--white">Article</button>
+          <button class="btn btn--white">
+            Property
+            <svg class="icon">
+              <use href="/src/assets/icons/chevron.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <button class="btn btn--outlined">Sign Up</button>
         </div>
       </nav>
       <header class="section header">
@@ -32,13 +43,26 @@
             >Everything you need about finding your place to live will be here,
             where it will be easier for you</span
           >
-          <div class="hero__searchbar">
-            <img src="/src/assets/icons/location.svg" class="icon icon--location" />
-            <input placeholder="Search for the location you want!" name="search" class="input input--complex" />
-            <button class="btn btn-primary">
-              Search
-              <img src="/src/assets/icons/chevron_right.svg" />
-            </button>
+          <div class="hero__searchbar complex-input-container">
+            <div class="complex-input__adornment--start">
+              <img
+                src="/src/assets/icons/location.svg"
+                class="icon icon--location"
+              />
+            </div>
+            <input
+              placeholder="Search for the location you want!"
+              name="search"
+              class="input input--complex"
+            />
+            <div class="complex-input__adornment--end">
+              <button class="btn btn--filled">
+                Search
+                <svg class="icon">
+                  <use href="/src/assets/icons/chevron.svg#chevron-right"></use>
+                </svg>
+              </button>
+            </div>
           </div>
           <span class="text text--light">Our Partnership</span>
           <div class="hero__partners">
@@ -49,35 +73,139 @@
           </div>
         </div>
         <div class="stats">
-          <img class="stats__bg-image" src="/src/assets/hero_bg.png" />
+          <div class="stats__bg-image">
+            <img src="/src/assets/hero_bg.png" />
+            <svg
+              class="vector vector--1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="71"
+              height="96"
+              viewBox="0 0 71 96"
+              fill="none"
+            >
+              <path
+                d="M2 93.5V8C2 4.68629 4.68629 2 8 2H68.5"
+                stroke="#EF4444"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="vector vector--2"
+              xmlns="http://www.w3.org/2000/svg"
+              width="47"
+              height="79"
+              viewBox="0 0 47 79"
+              fill="none"
+            >
+              <path
+                d="M2 2H38.5C41.8137 2 44.5 4.68629 44.5 8V77"
+                stroke="#3B82F6"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="vector vector--3"
+              xmlns="http://www.w3.org/2000/svg"
+              width="44"
+              height="101"
+              viewBox="0 0 44 101"
+              fill="none"
+            >
+              <path
+                d="M2 2H37.5C39.7091 2 41.5 3.79086 41.5 6V99"
+                stroke="#F59E0B"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="vector vector--4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="47"
+              height="4"
+              viewBox="0 0 47 4"
+              fill="none"
+            >
+              <path
+                d="M2 2H44.5"
+                stroke="#D1FAE5"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="vector vector--5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="4"
+              viewBox="0 0 16 4"
+              fill="none"
+            >
+              <path
+                d="M2 2H14"
+                stroke="#D1FAE5"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="vector vector--6"
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="4"
+              viewBox="0 0 34 4"
+              fill="none"
+            >
+              <path
+                d="M2 2H31.5"
+                stroke="#D1FAE5"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
           <div class="stats__container">
-            <div class="stats__item">
-              <div class="stats__item_icons">
-                <img src="/src/assets/stats/human_1.jpg" />
-                <img src="/src/assets/stats/human_2.jpg" />
-                <img src="/src/assets/stats/human_3.jpg" />
+            <div class="stats__track">
+              <div class="stats__item">
+                <div class="stats__item_icons">
+                  <img src="/src/assets/stats/human_1.jpg" />
+                  <img src="/src/assets/stats/human_2.jpg" />
+                  <img src="/src/assets/stats/human_3.jpg" />
+                </div>
+                <div class="stats__item_text">
+                  <span class="text text--bold">1K+ People</span>
+                  <span class="text text--small"
+                    >Successfully Getting Home</span
+                  >
+                </div>
               </div>
-              <div class="stats__item_text">
-                <span class="text text--bold">1K+ People</span>
-                <span class="text text--small">Successfully Getting Home</span>
+              <div class="stats__item">
+                <div class="stats__item_icons">
+                  <img src="/src/assets/stats/house.png" />
+                </div>
+                <div class="stats__item_text">
+                  <span class="text text--bold">56 Houses</span>
+                  <span class="text text--small">Sold Monthly</span>
+                </div>
               </div>
-            </div>
-            <div class="stats__item">
-              <div class="stats__item_icons">
-                <img src="/src/assets/stats/house.png" />
-              </div>
-              <div class="stats__item_text">
-                <span class="text text--bold">56 Houses</span>
-                <span class="text text--small">Sold Monthly</span>
-              </div>
-            </div>
-            <div class="stats__item">
-              <div class="stats__item_icons">
-                <img src="/src/assets/stats/human_4.jpg" />
-              </div>
-              <div class="stats__item_text">
-                <span class="text text--bold">4K+</span>
-                <span class="text text--small">People Looking for New Homes</span>
+              <div class="stats__item">
+                <div class="stats__item_icons">
+                  <img src="/src/assets/stats/human_4.jpg" />
+                </div>
+                <div class="stats__item_text">
+                  <span class="text text--bold">4K+</span>
+                  <span class="text text--small"
+                    >People Looking for New Homes</span
+                  >
+                </div>
               </div>
             </div>
           </div>
