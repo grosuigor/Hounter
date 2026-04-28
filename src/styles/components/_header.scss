@@ -5,7 +5,7 @@
   aspect-ratio: 2;
 
   & > div {
-    flex: 1;
+    width: 50%;
   }
 }
 
@@ -27,19 +27,16 @@
 
   &__searchbar {
     margin: 3.2rem 0;
-    position: relative;
 
-    & > .icon {
-      position: absolute;
+    & > div:first-child > .icon {
       width: 2.4rem;
       aspect-ratio: 1;
-      margin: 1.6rem 2.4rem;
+      margin-left: 2.4rem;
     }
 
-    & > .btn {
-      position: absolute;
-      transform: translateX(-100%);
-      margin: 0.4rem -0.4rem;
+    & > div:last-child > .btn {
+      align-self: stretch;
+      margin: 0.4rem;
     }
   }
 
@@ -62,18 +59,89 @@
     width: 50%;
     right: 0;
     top: 0;
-    border-bottom-left-radius: 8rem;
+    overflow: hidden;
+    border-bottom-left-radius: 10%;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        16.74deg,
+        #0c1537 -6.09%,
+        rgba(12, 21, 55, 0) 32.63%
+      );
+
+      pointer-events: none;
+    }
+
+    .vector {
+      position: absolute;
+
+      &--1 {
+        width: 9.24%;
+        height: 12.71%;
+        top: 17.6%;
+        left: 14.6%;
+      }
+
+      &--2 {
+        width: 6%;
+        height: 10.42%;
+        top: 50.75%;
+        left: 67.25%;
+      }
+
+      &--3 {
+        width: 5.49%;
+        height: 13.47%;
+        top: 26%;
+        left: 66.5%;
+      }
+
+      &--4 {
+        width: 5.9%;
+        height: 0.56%;
+        top: 46%;
+        left: 32.5%;
+      }
+
+      &--5 {
+        width: 1.67%;
+        height: 0.56%;
+        top: 46%;
+        left: 40.25%;
+      }
+
+      &--6 {
+        width: 4.1%;
+        height: 0.56%;
+        top: 46%;
+        left: 43.5%;
+      }
+    }
   }
 
   &__container {
     margin-left: 4.8rem;
-    top: 56.8rem;
+    bottom: 4.8rem;
     max-width: calc(50% - 4.8rem);
     position: absolute;
     display: flex;
-    flex-direction: row;
+    overflow-x: hidden;
+  }
+
+  &__track {
+    display: flex;
     gap: 1.6rem;
-    overflow: hidden;
+    width: max-content;
+    will-change: transform;
   }
 
   &__item {
@@ -96,6 +164,7 @@
         aspect-ratio: 1;
         border-radius: 50%;
         border: 0.3rem solid $color-white;
+        object-fit: cover;
       }
 
       @for $i from 1 through 3 {
@@ -111,7 +180,8 @@
     }
   }
 
-  &__item:first-child > div {
-      width: 5.6rem * 2;
+  &__item:first-child > div:first-child,
+  &__item:nth-child(4) > div:first-child {
+    width: 5.6rem * 2;
   }
 }
