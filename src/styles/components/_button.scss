@@ -1,25 +1,6 @@
 @use "../abstracts" as *;
 @use "sass:map";
 
-$button-colors: (
-  "white": (
-    color: $color-white,
-    accent: $color-primary,
-  ),
-  primary: (
-    color: $color-primary,
-    accent: $color-white,
-  ),
-  primary-light: (
-    color: $color-primary-light,
-    accent: $color-primary,
-  ),
-  primary-dark: (
-    color: $color-primary-dark,
-    accent: $color-white,
-  ),
-);
-
 .btn {
   display: inline-flex;
   flex-direction: row;
@@ -29,25 +10,47 @@ $button-colors: (
   gap: 0.8rem;
   font-size: $default-font-size;
   font-weight: $semi-bold-font;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid $color-primary;
   border-radius: 10rem;
   cursor: pointer;
   transition: all 0.2s ease;
   text-transform: capitalize;
-  outline-width: 0;
+  outline: none;
 
-  @each $name, $props in $button-colors {
-    &-#{$name} {
-      background-color: map.get($props, color);
-      color: map.get($props, accent);
-      border-color: $color-primary;
+  & > svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  
+  &--filled {
+    background-color: $color-primary;
+    color: $color-white;
 
-      &--outlined {
-        background-color: transparent;
-        color: map.get($props, color);
-        border-color: map.get($props, color);
-      }
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      background-color: $color-primary-dark;
+    }
+  }
+  
+  &--outlined {
+    background-color: $color-white;
+    color: $color-primary;
+
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      background-color: $color-primary-light;
+    }
+  }
+
+  &--white {
+    padding: 0.8rem 2.4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $color-white;
+    border-color: $color-white;
+
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.3);
     }
   }
 }

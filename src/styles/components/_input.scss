@@ -6,10 +6,24 @@
   outline: 0;
   border: 1px solid $color-grey-1;
   padding: 1.6rem 2.4rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $color-primary-light;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $color-primary;
+  }
 }
 
-.input--complex.complex-input__adornment--start {
+.complex-input__adornment--start + .input--complex {
   padding-left: 6.4rem;
+}
+
+.input--complex:has( + .complex-input__adornment--end) {
+  padding-right: 14rem;
 }
 
 .input,
@@ -20,23 +34,27 @@
   line-height: 2.4rem;
 }
 
-.complex-input {
-  &-container {
-    position: relative;
-    width: 100%;
-  }
+.complex-input-container {
+  position: relative;
+  width: 100%;
 
-  &__adornment {
-    &-container {
+  & > .complex-input__adornment {
+    &--start, &--end {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
       height: 100%;
-      display: flex;
-      direction: row;
+      display: inline-flex;
+      flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+    }
+
+    &--start {
+      left: 0;
+    }
+
+    &--end {
+      right: 0;
     }
   }
 }
