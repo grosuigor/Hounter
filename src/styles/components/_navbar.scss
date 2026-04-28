@@ -14,6 +14,10 @@
     align-items: center;
     color: $color-black;
     gap: 1rem;
+
+    & > h4 {
+      font-weight: $black-font;
+    }
   }
   
 
