@@ -1,0 +1,14 @@
+.blob-container {
+  position: absolute;
+  top: 0;
+}
+
+.blob {
+  z-index: -1;
+  position: absolute;
+  height: 49.4rem;
+  width: 43.8rem;
+  filter: blur(60px);
+  opacity: 0.3;
+  transform: rotate(-90deg);
+}

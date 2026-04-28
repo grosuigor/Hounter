@@ -7,6 +7,20 @@
   & > div {
     width: 50%;
   }
+
+  & > .blob-container {
+    left: 0;
+
+    & > .blob:first-child {
+      top: -16.4rem;
+      left: 13rem
+    }
+
+    & > .blob:last-child {
+      top: -13.3rem;
+      left: -17.5rem
+    }
+  }
 }
 
 .hero {
