@@ -14,35 +14,53 @@
   </head>
   <body>
     <div id="app" class="section-container section-container--landing">
-      <nav class="section navbar">
-        <div class="navbar__logo">
+      <header class="section header">
+        <div class="header__logo">
           <img width="36" height="36" src="/favicon.svg" />
           <h4 class="h4">Hounter</h4>
         </div>
-        <div class="navbar__delimiter"></div>
-        <div class="navbar__links">
+        <div class="header__delimiter"></div>
+        <nav class="header__links">
           <button class="btn btn--white">About Us</button>
           <button class="btn btn--white">Article</button>
-          <button class="btn btn--white">
+          <div class="dropdown-container">
+            <button class="btn btn--white">
+              Property
+              <svg class="icon">
+                <use href="/src/assets/icons/chevron.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <div class="dropdown">
+              <button class="btn btn--white dropdown__option">House</button>
+              <button class="btn btn--white dropdown__option">Villa</button>
+              <button class="btn btn--white dropdown__option">Apartment</button>
+            </div>
+          </div>
+          <button class="btn btn--outlined">Sign Up</button>
+        </nav>
+        <nav class="header__links--mobile">
+          <button class="btn btn--outlined">About Us</button>
+          <button class="btn btn--outlined">Article</button>
+          <button class="btn btn--outlined">
             Property
             <svg class="icon">
               <use href="/src/assets/icons/chevron.svg#chevron-down"></use>
             </svg>
           </button>
-          <button class="btn btn--outlined">Sign Up</button>
-        </div>
-      </nav>
-      <header class="section header">
+          <button class="btn btn--filled">Sign Up</button>
+        </nav>
+      </header>
+      <section class="section hero">
         <div class="blob-container">
-          <svg style="background-color: #82FFD2" class="blob">
+          <svg style="background-color: #82ffd2" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
-          <svg style="background-color: #82F7FF" class="blob">
+          <svg style="background-color: #82f7ff" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
         </div>
-        <div class="hero">
-          <h1 class="hero__title">
+        <div class="welcome">
+          <h1 class="welcome__title">
             find the place to<br />
             live <span>your dreams</span><br />
             easily here
@@ -51,7 +69,7 @@
             >Everything you need about finding your place to live will be here,
             where it will be easier for you</span
           >
-          <div class="hero__searchbar complex-input-container">
+          <div class="welcome__searchbar complex-input-container">
             <div class="complex-input__adornment--start">
               <img
                 src="/src/assets/icons/location.svg"
@@ -73,7 +91,7 @@
             </div>
           </div>
           <span class="text text--light">Our Partnership</span>
-          <div class="hero__partners">
+          <div class="welcome__partners">
             <img src="/src/assets/partners/traveloka.png" />
             <img src="/src/assets/partners/tiket.png" />
             <img src="/src/assets/partners/airbnb.png" />
@@ -83,102 +101,6 @@
         <div class="stats">
           <div class="stats__bg-image">
             <img src="/src/assets/hero_bg.png" />
-            <svg
-              class="vector vector--1"
-              xmlns="http://www.w3.org/2000/svg"
-              width="71"
-              height="96"
-              viewBox="0 0 71 96"
-              fill="none"
-            >
-              <path
-                d="M2 93.5V8C2 4.68629 4.68629 2 8 2H68.5"
-                stroke="#EF4444"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              class="vector vector--2"
-              xmlns="http://www.w3.org/2000/svg"
-              width="47"
-              height="79"
-              viewBox="0 0 47 79"
-              fill="none"
-            >
-              <path
-                d="M2 2H38.5C41.8137 2 44.5 4.68629 44.5 8V77"
-                stroke="#3B82F6"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              class="vector vector--3"
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="101"
-              viewBox="0 0 44 101"
-              fill="none"
-            >
-              <path
-                d="M2 2H37.5C39.7091 2 41.5 3.79086 41.5 6V99"
-                stroke="#F59E0B"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              class="vector vector--4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="47"
-              height="4"
-              viewBox="0 0 47 4"
-              fill="none"
-            >
-              <path
-                d="M2 2H44.5"
-                stroke="#D1FAE5"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              class="vector vector--5"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="4"
-              viewBox="0 0 16 4"
-              fill="none"
-            >
-              <path
-                d="M2 2H14"
-                stroke="#D1FAE5"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              class="vector vector--6"
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="4"
-              viewBox="0 0 34 4"
-              fill="none"
-            >
-              <path
-                d="M2 2H31.5"
-                stroke="#D1FAE5"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
           </div>
           <div class="stats__container">
             <div class="stats__track">
@@ -218,7 +140,7 @@
             </div>
           </div>
         </div>
-      </header>
+      </section>
       <!--
       <section class="section featured"></section>
       <section class="section tour"></section>
