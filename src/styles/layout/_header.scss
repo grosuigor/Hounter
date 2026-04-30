@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+.header {
+  z-index: 1000;
+  position: absolute !important;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: $color-black;
+    gap: 1rem;
+
+    & > h4 {
+      font-weight: $black-font;
+    }
+  }
+
+  &__delimiter {
+    flex: 1;
+  }
+
+  &__links,
+  &__links--mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.4rem;
+
+    @include respond(md) {
+      gap: 1.6rem;
+    }
+
+    @include respond(sm) {
+      gap: 0.8rem;
+
+      svg {
+        display: none;
+      }
+    }
+
+    & > :last-child {
+      height: 5rem;
+    }
+  }
+
+  &__links--mobile {
+    display: none;
+  }
+
+  @include respond(xs) {
+    &__links {
+      display: none;
+      &--mobile {
+        display: flex;
+      }
+    }
+  }
+}

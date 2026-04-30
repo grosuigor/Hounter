@@ -3,35 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hounter</title>
   </head>
   <body>
     <div id="app" class="section-container section-container--landing">
-      <header class="section section--header">
-
+      <header class="section header">
+        <div class="header__logo">
+          <img width="36" height="36" src="/favicon.svg" />
+          <h4 class="h4">Hounter</h4>
+        </div>
+        <div class="header__delimiter"></div>
+        <nav class="header__links">
+          <button class="btn btn--white">About Us</button>
+          <button class="btn btn--white">Article</button>
+          <div class="dropdown-container">
+            <button class="btn btn--white">
+              Property
+              <svg class="icon">
+                <use href="/src/assets/icons/chevron.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <div class="dropdown">
+              <button class="btn btn--white dropdown__option">House</button>
+              <button class="btn btn--white dropdown__option">Villa</button>
+              <button class="btn btn--white dropdown__option">Apartment</button>
+            </div>
+          </div>
+          <button class="btn btn--outlined">Sign Up</button>
+        </nav>
+        <nav class="header__links--mobile">
+          <button class="btn btn--outlined">About Us</button>
+          <button class="btn btn--outlined">Article</button>
+          <button class="btn btn--outlined">
+            Property
+            <svg class="icon">
+              <use href="/src/assets/icons/chevron.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <button class="btn btn--filled">Sign Up</button>
+        </nav>
       </header>
-      <section class="section section--featured">
-
+      <section class="section hero">
+        <div class="blob-container">
+          <svg style="background-color: #82ffd2" class="blob">
+            <use href="/src/assets/icons/blob.svg#blob"></use>
+          </svg>
+          <svg style="background-color: #82f7ff" class="blob">
+            <use href="/src/assets/icons/blob.svg#blob"></use>
+          </svg>
+        </div>
+        <div class="welcome">
+          <h1 class="welcome__title">
+            find the place to<br />
+            live <span>your dreams</span><br />
+            easily here
+          </h1>
+          <span class="text text--light"
+            >Everything you need about finding your place to live will be here,
+            where it will be easier for you</span
+          >
+          <div class="welcome__searchbar complex-input-container">
+            <div class="complex-input__adornment--start">
+              <img
+                src="/src/assets/icons/location.svg"
+                class="icon icon--location"
+              />
+            </div>
+            <input
+              placeholder="Search for the location you want!"
+              name="search"
+              class="input input--complex"
+            />
+            <div class="complex-input__adornment--end">
+              <button class="btn btn--filled">
+                Search
+                <svg class="icon">
+                  <use href="/src/assets/icons/chevron.svg#chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <span class="text text--light">Our Partnership</span>
+          <div class="welcome__partners">
+            <img src="/src/assets/partners/traveloka.png" />
+            <img src="/src/assets/partners/tiket.png" />
+            <img src="/src/assets/partners/airbnb.png" />
+            <img src="/src/assets/partners/trip_advisor.png" />
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stats__bg-image">
+            <img src="/src/assets/hero_bg.png" />
+          </div>
+          <div class="stats__container">
+            <div class="stats__track">
+              <div class="stats__item">
+                <div class="stats__item_icons">
+                  <img src="/src/assets/stats/human_1.jpg" />
+                  <img src="/src/assets/stats/human_2.jpg" />
+                  <img src="/src/assets/stats/human_3.jpg" />
+                </div>
+                <div class="stats__item_text">
+                  <span class="text text--bold">1K+ People</span>
+                  <span class="text text--small"
+                    >Successfully Getting Home</span
+                  >
+                </div>
+              </div>
+              <div class="stats__item">
+                <div class="stats__item_icons">
+                  <img src="/src/assets/stats/house.png" />
+                </div>
+                <div class="stats__item_text">
+                  <span class="text text--bold">56 Houses</span>
+                  <span class="text text--small">Sold Monthly</span>
+                </div>
+              </div>
+              <div class="stats__item">
+                <div class="stats__item_icons">
+                  <img src="/src/assets/stats/human_4.jpg" />
+                </div>
+                <div class="stats__item_text">
+                  <span class="text text--bold">4K+</span>
+                  <span class="text text--small"
+                    >People Looking for New Homes</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="section section--tour">
-        
-      </section>
-      <section class="section section--testimonials">
-        
-      </section>
-      <section class="section section--find-more">
-        
-      </section>
-      <section class="section section--subscribe">
-        
-      </section>
-      <section class="section section--form">
-        
-      </section>
-      <footer class="section section--footer">
-        
-      </footer>
+      <!--
+      <section class="section featured"></section>
+      <section class="section tour"></section>
+      <section class="section testimonials"></section>
+      <section class="section find-more"></section>
+      <section class="section subscribe"></section>
+      <section class="section form"></section>
+      <footer class="section footer"></footer>
+      -->
     </div>
     <script type="module" src="/src/index.js"></script>
   </body>
