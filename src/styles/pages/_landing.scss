@@ -29,4 +29,38 @@
     padding-left: 4rem;
     padding-right: 4rem;
   }
+
+  & > .label {
+    position: relative;
+    color: $color-secondary;
+
+    &--left {
+      text-align: left;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.7rem;
+        left: -4rem;
+        width: 3.2rem;
+        height: 1px;
+        background-color: $color-secondary;
+      }
+    }
+
+    &--center {
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -0.7rem;
+        left: calc(50%);
+        transform: translateX(-50%);
+        width: 3.2rem;
+        height: 1px;
+        background-color: $color-secondary;
+      }
+    }
+  }
 }

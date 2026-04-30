@@ -31,9 +31,9 @@
               </svg>
             </button>
             <div class="dropdown">
-              <button class="btn btn--white dropdown__option">House</button>
-              <button class="btn btn--white dropdown__option">Villa</button>
-              <button class="btn btn--white dropdown__option">Apartment</button>
+              <button class="btn btn--white dropdown__option" data-category="house">House</button>
+              <button class="btn btn--white dropdown__option" data-category="villa">Villa</button>
+              <button class="btn btn--white dropdown__option" data-category="appartement">Appartment</button>
             </div>
           </div>
           <button class="btn btn--outlined">Sign Up</button>
@@ -141,9 +141,53 @@
           </div>
         </div>
       </section>
-      <!--
-      <section class="section featured"></section>
+      <section class="section featured">
+        <span class="label label--left">Our Recommendation</span>
+        <div class="controls">
+          <div class="controls__title">
+            <h2 class="h2">Featured House</h2>
+          </div>
+          <div class="controls__categories">
+            <button class="btn btn--outlined" data-category="house">
+              <svg class="icon">
+                <use href="/src/assets/icons/home.svg#home"></use>
+              </svg>
+              House
+            </button>
+            <button class="btn btn--outlined" data-category="villa">
+              <svg class="icon">
+                <use href="/src/assets/icons/villa.svg#villa"></use>
+              </svg>
+              Villa
+            </button>
+            <button class="btn btn--outlined" data-category="appartement">
+              <svg class="icon">
+                <use href="/src/assets/icons/appartement.svg#appartement"></use>
+              </svg>
+              Appartement
+            </button>
+          </div>
+          <div class="controls__buttons">
+            <button class="btn btn--outlined btn--rounded" data-slide="prev">
+              <svg class="icon">
+                <use href="/src/assets/icons/chevron.svg#chevron-left"></use>
+              </svg>
+            </button>
+            <button class="btn btn--filled btn--rounded" data-slide="next">
+              <svg class="icon">
+                <use href="/src/assets/icons/chevron.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-container">
+          <div class="carousel">
+            
+          </div>
+        </div>
+      </section>
       <section class="section tour"></section>
+      <!--
       <section class="section testimonials"></section>
       <section class="section find-more"></section>
       <section class="section subscribe"></section>

@@ -26,9 +26,9 @@
     background-color: $color-primary;
     color: $color-white;
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
+    &:not(:disabled):hover,
+    &:not(:disabled):focus,
+    &:not(:disabled):focus-visible {
       outline: none;
       background-color: $color-primary-dark;
     }
@@ -38,12 +38,38 @@
     background-color: $color-white;
     color: $color-primary;
 
+    &:not(:disabled):hover,
+    &:not(:disabled):focus,
+    &:not(:disabled):focus-visible {
+      outline: none;
+      background-color: $color-primary-light;
+    }
+  }
+
+  &--rounded {
+    padding: 1.2rem;
+    border-radius: 50%;
+
+    & > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &--disabled {
+    background-color: $color-grey-1;
+    color: $color-primary;
+
     &:hover,
     &:focus,
     &:focus-visible {
       outline: none;
-      background-color: $color-primary-light;
+      background-color: $color-grey-1;
     }
+  }
+
+  &[disabled], &--disabled {
+    cursor: default;
   }
 
   &--white {
@@ -52,9 +78,9 @@
     color: $color-white;
     border-color: $color-white;
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
+    &:not(:disabled):hover,
+    &:not(:disabled):focus,
+    &:not(:disabled):focus-visible {
       outline: none;
       background-color: rgba(255, 255, 255, 0.3);
     }
