@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+
+.featured {
+  display: flex;
+  flex-direction: column;
+
+  & .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.6rem;
+
+    & > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__categories {
+      justify-content: center;
+      gap: 2.6rem;
+
+      & svg {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      @include respond(xs) {
+        gap: 1.6rem
+      }
+    }
+
+    &__buttons {
+      justify-content: flex-end;
+      gap: 1.6rem;
+
+      @include respond(xs) {
+        display: none !important;
+      }
+    }
+  }
+
+  & > .carousel-container {
+    position: relative;
+    overflow-x: hidden;
+
+    @include respond(xs) {
+      overflow-x: scroll;
+    }
+
+    & .carousel {
+      display: flex;
+      flex-direction: row;
+      gap: 3.2rem;
+      will-change: transform;
+      transition: 0.4s all ease-in-out;
+
+      & .card {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        gap: 2.4rem;
+
+        &__image-container {
+          position: relative;
+
+          & > img {
+            width: 37.6rem;
+            height: 38.2rem;
+            border-radius: 2.4rem;
+            object-fit: cover;
+          }
+        }
+
+        &__image-label {
+          position: absolute;
+          bottom: 2rem;
+          left: 1.6rem;
+          display: flex;
+          gap: 0.8rem;
+          align-items: center;
+          padding: 0.8rem 1.6rem;
+          border-radius: 3.2rem;
+
+          &--hot {
+            background-color: $color-danger-light;
+            color: $color-danger;
+          }
+
+          &--new {
+            background-color: $color-info-light;
+            color: $color-info;
+          }
+
+          &--best {
+            background-color: $color-success-light;
+            color: $color-succes;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          & > .h4 {
+            color: $color-grey-3;
+            font-weight: $medium-font;
+          }
+        }
+
+        &__seller-container {
+          margin-top: 1.6rem;
+          display: flex;
+          flex-direction: row;
+          gap: 1.6rem;
+          align-items: center;
+
+          & > img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+          }
+        }
+
+        &__seller-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+
+          & > .label {
+            color: $color-grey-2;
+          }
+        }
+      }
+    }
+  }
+}
