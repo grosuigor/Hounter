@@ -178,11 +178,16 @@
   &__container {
     margin-left: 4.8rem;
     bottom: 4.8rem;
-    max-width: calc(50vw - 4.8rem);
+    max-width: calc(min(50vw) - 4.8rem);
     z-index: 3;
     position: absolute;
     display: flex;
     overflow-x: hidden;
+
+    @include respond(xl) {
+      max-width: unset;
+      width: calc(min(50vw) - 4.8rem);
+    }
 
     @include respond(md) {
       bottom: 6rem;
