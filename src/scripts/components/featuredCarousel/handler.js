@@ -121,3 +121,4 @@ pickCategory("house");
 new ResizeObserver(() => {
   requestAnimationFrame(updateCarouselPosition);
 }).observe(carousel);
+
