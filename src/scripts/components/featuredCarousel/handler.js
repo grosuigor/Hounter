@@ -2,10 +2,8 @@ import { DATA } from "./data";
 import { cardTemplate } from "./cardTemplate";
 import { getViewportSize } from "../../mediaQueries";
 
-//constants
 const ANIMATION_DURATION = 400;
 
-//elements
 const section = document.querySelector(".featured");
 const carousel = section.querySelector(".carousel");
 const categoryButtons = Array.from(
@@ -15,11 +13,9 @@ const [backArrow, forwardArrow] = section.querySelectorAll(
   ".controls__buttons button",
 );
 
-//state
 let currentCategory = "villa";
 let currentIndex = 0;
 
-//animations & UI
 function updateCarouselPosition(forceInitPosition = false) {
   if (forceInitPosition) {
     const viewportSize = getViewportSize();
@@ -60,7 +56,6 @@ function setCarouselCards(category) {
   }, ANIMATION_DURATION / 2);
 }
 
-//controls (arrows)
 function getMaxIndex() {
   return DATA[currentCategory].length - 1;
 }
@@ -86,7 +81,6 @@ function updateIndex(delta) {
   updateControlsAvailability();
 }
 
-//category buttons
 function updateButtonsAvailability() {
   categoryButtons.forEach((categoryButton) => {
     let [classToAdd, classToRemove] = ["btn--outlined", "btn--filled"];
@@ -100,7 +94,6 @@ function updateButtonsAvailability() {
   });
 }
 
-//module handler
 export function pickCategory(category) {
   if (!Object.hasOwn(DATA, category) || category === currentCategory) {
     return;
@@ -113,7 +106,6 @@ export function pickCategory(category) {
   updateButtonsAvailability();
 }
 
-//event handlers
 categoryButtons.forEach((categoryButton) =>
   categoryButton.addEventListener("click", () => {
     pickCategory(categoryButton.dataset.category);
@@ -123,7 +115,6 @@ categoryButtons.forEach((categoryButton) =>
 backArrow.addEventListener("click", () => updateIndex(-1));
 forwardArrow.addEventListener("click", () => updateIndex(1));
 
-//init state
 pickCategory("house");
 
 new ResizeObserver(() => {
