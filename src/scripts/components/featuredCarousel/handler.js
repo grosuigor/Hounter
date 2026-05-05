@@ -3,6 +3,7 @@ import { cardTemplate } from "./cardTemplate";
 import { getViewportSize } from "../../mediaQueries";
 
 const ANIMATION_DURATION = 400;
+const CARDS_PER_VIEWPORT = 3
 
 const section = document.querySelector(".featured");
 const carousel = section.querySelector(".carousel");
@@ -57,7 +58,7 @@ function setCarouselCards(category) {
 }
 
 function getMaxIndex() {
-  return DATA[currentCategory].length - 1;
+  return DATA[currentCategory].length - CARDS_PER_VIEWPORT;
 }
 
 function setArrowState(arrow, disabled) {
