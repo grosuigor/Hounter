@@ -15,7 +15,7 @@ const createAnimation = () => {
 
   const viewportSize = getViewportSize();
 
-  if (viewportSize !== "xs") {
+  if (viewportSize !== "xs" && viewportSize !== "xl") {
     if (!isDuplicated) {
       track.innerHTML += initialContent;
       isDuplicated = true;
