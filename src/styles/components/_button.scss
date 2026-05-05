@@ -122,7 +122,6 @@
     transform: scaleY(0%);
     transform-origin: top center;
     transition: 0.4s all ease-in-out;
-    will-change: transform;
   }
 
   &::before {
@@ -140,7 +139,6 @@
     transform: scaleY(0%);
     transform-origin: bottom center;
     transition: 0.4s all ease-in-out;
-    will-change: transform;
   }
 
   &--active > .dropdown,
