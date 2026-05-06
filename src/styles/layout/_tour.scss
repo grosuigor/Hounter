@@ -1,6 +1,38 @@
 @use "../abstracts" as *;
 
 .tour {
+  & > .blob-container {
+    top: 162.5rem;
+    right: 0;
+
+    @include respond(xs) {
+      top: 229rem;
+      left: 0;
+      right: unset;
+    }
+
+    & > .blob:first-child {
+      top: -20rem;
+      right: 2.5rem;
+
+      @include respond(xs) {
+        left: 3rem;
+        right: unset;
+      }
+    }
+
+    & > .blob:last-child {
+      top: -11.3rem;
+      right: 1.5rem;
+
+      @include respond(xs) {
+        top: -18rem;
+        left: 53rem;
+        right: unset;
+      }
+    }
+  }
+
   &__content {
     display: flex;
     flex-direction: row;
