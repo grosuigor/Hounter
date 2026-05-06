@@ -21,11 +21,6 @@
       justify-content: center;
       gap: 2.6rem;
 
-      & svg {
-        width: 2.4rem;
-        height: 2.4rem;
-      }
-
       @include respond(xs) {
         gap: 1.6rem
       }
