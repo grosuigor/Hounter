@@ -17,14 +17,9 @@
   text-transform: capitalize;
   outline: none;
 
-  & > .icon {
-    width: 2.4rem;
-    height: 2.4rem;
-
-    &--small {
-      width: 1.6rem;
-      height: 1.6rem;
-    }
+  & > svg {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   &--filled {
@@ -54,6 +49,11 @@
   &--rounded {
     padding: 1.2rem;
     border-radius: 50%;
+
+    & > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 
   &--disabled {
