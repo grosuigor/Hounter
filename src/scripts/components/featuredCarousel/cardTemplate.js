@@ -10,11 +10,11 @@ export function cardTemplate(category, i, { name, price, seller, location, label
     <div class="card__content">
       <h3 class="h3">${name}</h3>
       <h4 class="h4">$ ${price}</h4>
-      <div class="card__seller-container">
+      <div class="avatar">
         <img src="./src/assets/featured/${category}/seller_${i}.jpg" />
-        <div class="card__seller-info">
-          <span class="subtitle">${seller}</span>
-          <span class="label">${location}</span>
+        <div class="avatar__text">
+          <span>${seller}</span>
+          <span>${location}</span>
         </div>
       </div>
     </div>

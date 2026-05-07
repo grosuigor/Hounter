@@ -1,0 +1,80 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  align-items: center;
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & img:not(.icon) {
+    width: 5.6rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0.3rem solid $color-white;
+    object-fit: cover;
+
+    @include respond(md) {
+      width: 4.8rem;
+    }
+
+    @include respond(sm) {
+      width: 4.2rem;
+    }
+
+    @include respond(xs) {
+      width: 4.8rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    & > span:first-child {
+      @extend .subtitle;
+    }
+
+    & > span:last-child {
+      @extend .label;
+      color: $color-grey-2;
+    }
+  }
+
+  &--small {
+    & img:not(.icon) {
+      width: 4rem;
+
+      @include respond(md) {
+        width: 3.6rem;
+      }
+
+      @include respond(sm) {
+        width: 3.2rem;
+      }
+
+      @include respond(xs) {
+        width: 3.6rem;
+      }
+    }
+
+    & .avatar__text {
+      & > span:first-child {
+        @extend .label;
+        line-height: 100%;
+      }
+
+      & > span:last-child {
+        @extend .label--small;
+        line-height: 100%;
+      }
+    }
+  }
+}
