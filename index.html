@@ -119,33 +119,33 @@
           </div>
           <div class="stats__container">
             <div class="stats__track">
-              <div class="stats__item">
-                <div class="stats__item_icons">
+              <div class="avatar">
+                <div class="avatar__images">
                   <img src="/src/assets/stats/human_1.jpg" />
                   <img src="/src/assets/stats/human_2.jpg" />
                   <img src="/src/assets/stats/human_3.jpg" />
                 </div>
-                <div class="stats__item_text">
+                <div class="avatar__text">
                   <span class="text text--bold">1K+ People</span>
                   <span class="text text--small"
                     >Successfully Getting Home</span
                   >
                 </div>
               </div>
-              <div class="stats__item">
-                <div class="stats__item_icons">
+              <div class="avatar">
+                <div class="avatar__images">
                   <img src="/src/assets/stats/house.png" />
                 </div>
-                <div class="stats__item_text">
+                <div class="avatar__text">
                   <span class="text text--bold">56 Houses</span>
                   <span class="text text--small">Sold Monthly</span>
                 </div>
               </div>
-              <div class="stats__item">
-                <div class="stats__item_icons">
+              <div class="avatar">
+                <div class="avatar__images">
                   <img src="/src/assets/stats/human_4.jpg" />
                 </div>
-                <div class="stats__item_text">
+                <div class="avatar__text">
                   <span class="text text--bold">4K+</span>
                   <span class="text text--small"
                     >People Looking for New Homes</span
@@ -201,10 +201,10 @@
       </section>
       <section class="section tour">
         <div class="blob-container">
-          <svg style="background-color: #FF9882" class="blob">
+          <svg style="background-color: #ff9882" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
-          <svg style="background-color: #FFFA82" class="blob">
+          <svg style="background-color: #fffa82" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
         </div>
@@ -219,28 +219,28 @@
             <span class="text text--bold">House Detail</span>
             <div class="tour__grid">
               <div class="tour__grid-item">
-                <img src="/src/assets/icons/tour/bed.svg" />
+                <img src="/src/assets/icons/tour/bed.svg" class="icon" />
                 <span class="text">4 Bedrooms</span>
               </div>
               <div class="tour__grid-item">
-                <img src="/src/assets/icons/tour/shower.svg" />
+                <img src="/src/assets/icons/tour/shower.svg" class="icon" />
                 <span class="text">2 Bathrooms</span>
               </div>
               <div class="tour__grid-item">
-                <img src="/src/assets/icons/tour/carport.svg" />
+                <img src="/src/assets/icons/tour/carport.svg" class="icon" />
                 <span class="text">1 Carport</span>
               </div>
               <div class="tour__grid-item">
-                <img src="/src/assets/icons/tour/stair.svg" />
+                <img src="/src/assets/icons/tour/stair.svg" class="icon" />
                 <span class="text">2 Floors</span>
               </div>
             </div>
             <div class="divider"></div>
-            <div class="tour__contacts">
+            <div class="avatar">
               <img src="/src/assets/tour/avatar.jpg" />
-              <div class="tour__contacts-text">
-                <span class="subtitle">Dianne Russell</span>
-                <span class="label">Manchester, Kentucky</span>
+              <div class="avatar__text">
+                <span>Dianne Russell</span>
+                <span>Manchester, Kentucky</span>
               </div>
               <button class="btn btn--filled">
                 <svg class="icon">
@@ -267,9 +267,93 @@
           </div>
         </div>
       </section>
-      <section class="section testimonials"></section>
-      <!--
+      <section class="section testimonials">
+        <span class="label label--center">See Our Review</span>
+        <h2 class="h2">What Our User Say About Us</h2>
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel__track">
+              <div class="carousel__item">
+                <img src="/src/assets/testimonials/review-1.jpg" />
+                <div class="review">
+                  <h4 class="h4">My house sold out fast!</h4>
+                  <span class="label"
+                    >I was finally able to sell my house quickly through Hounter
+                    by immediately setting me up with people who wanted my
+                    house. I also do not get a discount from the sale of my
+                    house. Awesome!</span
+                  >
+                  <div class="avatar avatar--small">
+                    <img src="/src/assets/testimonials/reviewer-1.jpg" />
+                    <div class="avatar__text">
+                      <span>Dianne Russell</span>
+                      <span>Manchester, Kentucky</span>
+                    </div>
+                    <img src="/src/assets/icons/star.svg" class="icon" />
+                    <h4 class="h4">4.3</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__item">
+                <img src="/src/assets/testimonials/review-2.jpg" />
+                <div class="review">
+                  <h4 class="h4">
+                    Best! I got the house I wanted through Hounter
+                  </h4>
+                  <span class="label"
+                    >Through this website I can get a house with the type and
+                    specifications I want very easily, without a complicated
+                    process to be able to find information on the house we
+                    want.</span
+                  >
+                  <div class="avatar avatar--small">
+                    <img src="/src/assets/testimonials/reviewer-2.jpg" />
+                    <div class="avatar__text">
+                      <span>Jenny Wilson</span>
+                      <span>Manager Director</span>
+                    </div>
+                    <img src="/src/assets/icons/star.svg" class="icon" />
+                    <h4 class="h4">4.6</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__item">
+                <img src="/src/assets/testimonials/review-3.jpg" />
+                <div class="review">
+                  <h4 class="h4">
+                    Through the Hounter, I can get a house for my self
+                  </h4>
+                  <span class="label"
+                    >By looking for information about what kind of house we
+                    want, we managed to get the house we wanted very quickly,
+                    and directly connected with the seller to be able to ask
+                    about the details, very helpful!</span
+                  >
+                  <div class="avatar avatar--small">
+                    <img src="/src/assets/testimonials/reviewer-3.jpg" />
+                    <div class="avatar__text">
+                      <span>Ronald Richards</span>
+                      <span>Head of Marketing</span>
+                    </div>
+                    <img src="/src/assets/icons/star.svg" class="icon" />
+                    <h4 class="h4">4.6</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__dots">
+            <button class="carousel__dot"></button>
+            <button
+              class="carousel__dot carousel__dot--active"
+              disabled
+            ></button>
+            <button class="carousel__dot"></button>
+          </div>
+        </div>
+      </section>
       <section class="section find-more"></section>
+      <!--
       <section class="section subscribe"></section>
       <section class="section form"></section>
       <footer class="section footer"></footer>
