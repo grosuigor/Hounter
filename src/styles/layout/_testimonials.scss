@@ -1,0 +1,124 @@
+@use "../abstracts" as *;
+
+$carousel-min-height: 51.6rem;
+$carousel-height: $carousel-min-height + 2.4rem;
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  text-align: center;
+
+  & > .carousel-container {
+    & .carousel {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      min-height: $carousel-min-height;
+      height: $carousel-height;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+
+      @include respond(xs) {
+        overflow-x: scroll;
+        justify-content: flex-start;
+      }
+
+      &__track {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        gap: 3.2rem;
+        transition: 0.4s all ease-in-out;
+      }
+
+      &__item {
+        position: relative;
+        width: 78.4rem;
+        flex-shrink: 0;
+        border-radius: 0.8rem;
+
+        & > img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 43rem;
+          object-fit: cover;
+        }
+      }
+
+      &__dots {
+        margin-top: $carousel-height;
+        display: flex;
+        justify-content: center;
+        gap: 1.6rem;
+      }
+
+      &__dot {
+        width: 0.8rem;
+        aspect-ratio: 1;
+        background-color: $color-grey-1;
+        border-radius: 50%;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        outline: none;
+
+        @include respond(xs) {
+          display: none;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+          background-color: $color-grey-2;
+        }
+
+        &--active {
+          background-color: $color-grey-3;
+          cursor: default;
+
+          &:hover,
+          &:focus,
+          &:focus-visible {
+            background-color: $color-grey-3;
+          }
+        }
+      }
+    }
+  }
+
+  & .review {
+    z-index: 10;
+    position: absolute;
+    top: 26.4rem;
+    left: 8.6rem;
+    width: 61.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+    background-color: $color-white;
+    text-align: left;
+    box-shadow: 0px 8px 32px 0px #0c153717;
+
+    & > .label {
+      color: $color-grey-3;
+    }
+
+    & .avatar {
+      &__text {
+        flex: 1;
+      }
+
+      & > .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+}
