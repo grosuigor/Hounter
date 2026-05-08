@@ -125,15 +125,6 @@
     @include respond(xs) {
       margin: 3.2rem 0;
     }
-
-    & > div:first-child > .icon {
-      margin-left: 2.4rem;
-    }
-
-    & > div:last-child > .btn {
-      align-self: stretch;
-      margin: 0.4rem;
-    }
   }
 
   &__partners {
