@@ -11,6 +11,31 @@ $article-list-height: $article-height * 3 + $article-list-gap * 2;
   align-items: center;
   gap: 2.4rem;
   text-align: center;
+
+  & > .blob-container {
+    left: 0;
+
+    & > .blob:first-child {
+      top: -5rem;
+      left: -17.5rem;
+
+      @include respond(xs) {
+        top: -15rem;
+        left: -17.5rem;
+      }
+    }
+
+    & > .blob:last-child {
+      top: 20rem;
+      left: -12.5rem;
+
+      @include respond(xs) {
+        top: -14rem;
+        left: unset;
+        right: 3rem;
+      }
+    }
+  }
 }
 
 .articles-container {
@@ -148,7 +173,8 @@ $article-list-height: $article-height * 3 + $article-list-gap * 2;
     background-color: rgba(0, 0, 0, 0.85);
     transform-origin: center center;
 
-    &::after, &::before {
+    &::after,
+    &::before {
       content: "";
       position: fixed;
       right: 4rem;
