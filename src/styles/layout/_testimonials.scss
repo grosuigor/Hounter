@@ -1,7 +1,10 @@
 @use "../abstracts" as *;
 
 $carousel-min-height: 51.6rem;
-$carousel-height: $carousel-min-height + 2.4rem;
+$carousel-height: $carousel-min-height + 4rem;
+$carousel-item-width: 78.4;
+$carousel-gap: 3.2;
+$carousel-width: calc(($carousel-item-width * 3 + $carousel-gap * 2) / 16) * 10;
 
 .testimonials {
   display: flex;
@@ -16,26 +19,25 @@ $carousel-height: $carousel-min-height + 2.4rem;
       width: 100%;
       min-height: $carousel-min-height;
       height: $carousel-height;
-      overflow-x: hidden;
+      overflow-x: auto;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
 
-      @include respond(xs) {
-        overflow-x: scroll;
-        justify-content: flex-start;
+      @include respond($carousel-width) {
+        justify-content: center;
       }
 
       &__track {
         display: flex;
         flex-direction: row;
-        width: max-content;
-        gap: 3.2rem;
+        width: $carousel-width;
+        gap: $carousel-gap * 1rem;
         transition: 0.4s all ease-in-out;
       }
 
       &__item {
         position: relative;
-        width: 78.4rem;
+        width: $carousel-item-width * 1rem;
         flex-shrink: 0;
         border-radius: 0.8rem;
 
@@ -50,7 +52,7 @@ $carousel-height: $carousel-min-height + 2.4rem;
       }
 
       &__dots {
-        margin-top: $carousel-height;
+        margin-top: calc($carousel-height + 3rem);
         display: flex;
         justify-content: center;
         gap: 1.6rem;
@@ -66,6 +68,10 @@ $carousel-height: $carousel-min-height + 2.4rem;
         cursor: pointer;
         transition: all 0.2s ease;
         outline: none;
+
+        @include respond($carousel-width) {
+          display: none;
+        }
 
         @include respond(xs) {
           display: none;
