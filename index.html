@@ -15,10 +15,12 @@
   <body>
     <div id="app" class="section-container section-container--landing">
       <header class="section header">
-        <div class="header__logo">
-          <img width="36" height="36" src="/favicon.svg" />
-          <h4 class="h4">Hounter</h4>
-        </div>
+        <a href="/">
+          <div class="logo">
+            <img width="36" height="36" src="/favicon.svg" />
+            <h4 class="h4">Hounter</h4>
+          </div>
+        </a>
         <div class="header__delimiter"></div>
         <nav class="header__links">
           <button class="btn btn--white">About Us</button>
@@ -495,7 +497,66 @@
           </button>
         </form>
       </section>
-      <footer class="section footer"></footer>
+      <footer class="section footer">
+        <div class="blob-container">
+          <svg style="background-color: #B9FF82" class="blob">
+            <use href="/src/assets/icons/blob.svg#blob"></use>
+          </svg>
+          <svg style="background-color: #82BBFF" class="blob">
+            <use href="/src/assets/icons/blob.svg#blob"></use>
+          </svg>
+        </div>
+        <div class="footer__about">
+          <a href="/">
+            <div class="logo">
+              <img width="36" height="36" src="/favicon.svg" />
+              <h4 class="h4">Hounter</h4>
+            </div>
+          </a>
+          <span class="label">
+            We provide information about properties such as houses, villas and
+            apartments to help people find their dream home
+          </span>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="/src/assets/icons/socials/facebook.svg" />
+            </a>
+            <a href="https://x.com/" target="_blank">
+              <img src="/src/assets/icons/socials/twitter.svg" />
+            </a>
+            <a href="https://www.pinterest.com/" target="_blank">
+              <img src="/src/assets/icons/socials/pinterest.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="footer__link-columns">
+          <div class="footer__link-column">
+            <div class="subtitle">Property</div>
+            <div class="label">House</div>
+            <div class="label">Apartment</div>
+            <div class="label">Villa</div>
+          </div>
+          <div class="footer__link-column">
+            <div class="subtitle">Article</div>
+            <div class="label">New Article</div>
+            <div class="label">Popular Article</div>
+            <div class="label">Most Read</div>
+            <div class="label">Tips & Tricks</div>
+          </div>
+          <div class="footer__link-column">
+            <div class="subtitle">Contact</div>
+            <a href="https://maps.app.goo.gl/nhqD9HCJ9G9HWDrw6" target="_blank">
+              <div class="label">2464 Royal Ln. Mesa, New Jersey 45463</div>
+            </a>
+            <a href="tel:(671) 555-0110">
+              <div class="label">(671) 555-0110</div>
+            </a>
+            <a href="mailto:info@hounter.com">
+              <div class="label">info@hounter.com</div>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
     <script type="module" src="/src/index.js"></script>
   </body>
