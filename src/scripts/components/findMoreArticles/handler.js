@@ -22,7 +22,7 @@ function addArticlesToList() {
     currentArticlesAmount,
     currentArticlesAmount + ARTICLES_PER_VIEWPORT,
   )
-    .map((article, index) => articleTemplate(index + 1 + currentArticlesAmount, article))
+    .map((article, index) => articleTemplate(index + currentArticlesAmount + 1, article))
     .join("");
 
   if (currentArticlesAmount === 0) {
