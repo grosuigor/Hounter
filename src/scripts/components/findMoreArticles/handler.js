@@ -22,7 +22,7 @@ function addArticlesToList() {
     currentArticlesAmount,
     currentArticlesAmount + ARTICLES_PER_VIEWPORT,
   )
-    .map((article, index) => articleTemplate(index + start + 1, article))
+    .map((article, index) => articleTemplate(index + 1 + currentArticlesAmount, article))
     .join("");
 
   if (currentArticlesAmount === 0) {
@@ -111,7 +111,6 @@ function unpickArticle() {
 
 addArticlesToList();
 
-const viewportSize = getViewportSize();
 if (!isMobile()) {
   pickArticle(0, true);
 }
