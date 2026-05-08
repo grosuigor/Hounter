@@ -78,7 +78,6 @@ function pickArticle(index, skipAnimation = false) {
 
   setTimeout(
     () => {
-      console.log(index);
       bigArticleContainer.innerHTML = bigArticleTemplate(
         index + 1,
         DATA[index],
