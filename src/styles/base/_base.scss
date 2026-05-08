@@ -17,6 +17,11 @@ body {
   overflow-x: clip;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 ::selection {
   background-color: $color-primary;
   color: $color-white;
