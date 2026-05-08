@@ -21,8 +21,8 @@ $breakpoints: (
 
 @mixin respond($breakpoint, $type: min) {
 
-  @if map-has-key($breakpoints, $breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
 
     @if $breakpoint == xl {
       @media only screen and (min-width: $value) {
@@ -35,7 +35,7 @@ $breakpoints: (
     }
   }
 
-  @else if type-of($breakpoint) == number {
+  @else if meta.type-of($breakpoint) == number {
     @media only screen and (#{$type}-width: calc($breakpoint * 1em)) {
       @content;
     }
