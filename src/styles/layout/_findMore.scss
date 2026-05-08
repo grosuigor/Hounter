@@ -173,8 +173,7 @@ $article-list-height: $article-height * 3 + $article-list-gap * 2;
     background-color: rgba(0, 0, 0, 0.85);
     transform-origin: center center;
 
-    &::after,
-    &::before {
+    &::after, &::before {
       content: "";
       position: fixed;
       right: 4rem;
