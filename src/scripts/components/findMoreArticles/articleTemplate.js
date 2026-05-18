@@ -1,3 +1,5 @@
+const MAX_PREVIEW_TITLE_LENGTH = 100
+
 function genericArticle({ index, author, title, titleClass, desc, timestamp }) {
   return `<img src="/src/assets/find_more/article-${index}.jpg" />
   <div class="article__content">
@@ -27,6 +29,10 @@ function genericArticle({ index, author, title, titleClass, desc, timestamp }) {
 }
 
 export function articleTemplate(index, { author, title, timestamp }) {
+  if (title.length > MAX_PREVIEW_TITLE_LENGTH) {
+    title = title.slice(MAX_PREVIEW_TITLE_LENGTH) + '...'
+  }
+
   return `<div class="article" data-id="${index}">
     ${genericArticle({
       index,
