@@ -1,9 +1,9 @@
 import { DATA } from "./data";
 import { cardTemplate } from "./cardTemplate";
-import { getViewportSize } from "../../mediaQueries";
+import { isMobile } from "../../mediaQueries";
+import { ANIMATIONS } from "../../animations";
 
-const ANIMATION_DURATION = 400;
-const CARDS_PER_VIEWPORT = 3
+const CARDS_PER_VIEWPORT = 3;
 
 const section = document.querySelector(".featured");
 const carousel = section.querySelector(".carousel");
@@ -19,12 +19,11 @@ let currentIndex = 0;
 
 function updateCarouselPosition(forceInitPosition = false) {
   if (forceInitPosition) {
-    const viewportSize = getViewportSize();
-    if (viewportSize === "xs") {
+    if (isMobile()) {
       carousel.parentElement.scrollTo({
         left: 0,
-        behavior: "instant"
-      })
+        behavior: "instant",
+      });
     } else {
       carousel.style.transform = "translateX(0px)";
     }
@@ -40,13 +39,7 @@ function updateCarouselPosition(forceInitPosition = false) {
 function setCarouselCards(category) {
   const cardsData = DATA[category];
 
-  const animation = carousel.animate(
-    [{ opacity: 1 }, { opacity: 0 }, { opacity: 1 }],
-    {
-      duration: ANIMATION_DURATION,
-      easing: "linear",
-    },
-  );
+  const animation = carousel.animate(ANIMATIONS.FADE.keyframes, ANIMATIONS.FADE.config);
 
   setTimeout(() => {
     carousel.innerHTML = cardsData.reduce(
@@ -54,7 +47,7 @@ function setCarouselCards(category) {
       "",
     );
     updateCarouselPosition(true);
-  }, ANIMATION_DURATION / 2);
+  }, ANIMATIONS.FADE.duration / 2);
 }
 
 function getMaxIndex() {
@@ -121,4 +114,3 @@ pickCategory("house");
 new ResizeObserver(() => {
   requestAnimationFrame(updateCarouselPosition);
 }).observe(carousel);
-

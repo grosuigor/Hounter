@@ -1,6 +1,5 @@
-import { getViewportSize } from "../mediaQueries";
-
-const ANIMATION_DURATION = 20 * 1000; // 20 sec
+import { getViewportSize } from "../../mediaQueries";
+import { ANIMATIONS } from "../../animations";
 
 const container = document.querySelector(".stats__container");
 const track = document.querySelector(".stats__track");
@@ -25,15 +24,8 @@ const createAnimation = () => {
     const gap = parseFloat(styles.gap) || 0;
 
     animation = track.animate(
-      [
-        { transform: "translateX(0px)" },
-        { transform: `translateX(-${(track.scrollWidth + gap) / 2}px)` },
-      ],
-      {
-        duration: ANIMATION_DURATION,
-        iterations: Infinity,
-        easing: "linear",
-      },
+      ANIMATIONS.CAROUSEL.keyframes((track.scrollWidth + gap) / 2),
+      ANIMATIONS.CAROUSEL.config
     );
   } else {
     if (isDuplicated) {

@@ -1,0 +1,226 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+$article-height: 14.8rem;
+$article-list-gap: 3.2rem;
+$article-list-height: $article-height * 3 + $article-list-gap * 2;
+
+.find-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  text-align: center;
+
+  & > .blob-container {
+    left: 0;
+
+    & > .blob:first-child {
+      top: -5rem;
+      left: -17.5rem;
+
+      @include respond(xs) {
+        top: -15rem;
+        left: -17.5rem;
+      }
+    }
+
+    & > .blob:last-child {
+      top: 20rem;
+      left: -12.5rem;
+
+      @include respond(xs) {
+        top: -14rem;
+        left: unset;
+        right: 3rem;
+      }
+    }
+  }
+
+  & > .h2 {
+    margin-top: -1rem;
+  }
+
+  & > .btn {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+.articles-container {
+  display: flex;
+  gap: 3.2rem;
+  width: 100%;
+  margin-top: 3.2rem;
+
+  & > div {
+    width: calc(50% - 1.6rem);
+  }
+
+  @include respond(sm) {
+    & > div:first-child {
+      width: calc(60% - 1.6rem);
+    }
+    & > div:last-child {
+      width: calc(40% - 1.6rem);
+    }
+  }
+
+  @include respond(xs) {
+    flex-direction: column;
+    & > div {
+      width: 100% !important;
+    }
+  }
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: $article-list-gap;
+  max-height: $article-list-height;
+  overflow-y: auto;
+
+  @include respond(xs) {
+    max-height: unset;
+  }
+
+  & .article {
+    height: $article-height;
+    align-items: stretch;
+    max-width: calc(100% - 1.5rem);
+    display: flex;
+    text-align: left;
+    gap: 3.2rem;
+    cursor: pointer;
+
+    & > img {
+      height: $article-height;
+      width: 20rem;
+      border-radius: 1.6rem;
+      object-fit: cover;
+    }
+
+    &__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 0.8rem 0;
+      gap: 1.6rem;
+
+      & .avatar {
+        &__text > span {
+          color: #3c4563;
+          font-weight: $regular-font;
+        }
+
+        & img {
+          width: 3.2rem;
+        }
+      }
+
+      & .subtitle {
+        transition: 0.2s all ease-in-out;
+      }
+
+      & .label {
+        display: inline-flex;
+        gap: 1.2rem;
+        align-items: center;
+        color: $color-grey-2;
+      }
+    }
+
+    &:hover {
+      .article__content > .subtitle {
+        color: $color-primary-dark;
+      }
+    }
+  }
+}
+
+.article--big {
+  display: flex;
+  flex-direction: column;
+  gap: $article-list-gap;
+  text-align: left;
+  cursor: default;
+
+  @include respond(xs) {
+    display: none;
+  }
+
+  & > img {
+    aspect-ratio: 2;
+    width: 100%;
+    border-radius: 1.6rem;
+    object-fit: cover;
+  }
+
+  & .article__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    & .avatar {
+      &__text > span {
+        color: #3c4563;
+        font-weight: $regular-font;
+      }
+
+      & img {
+        width: 3.2rem;
+      }
+    }
+
+    & .label {
+      display: inline-flex;
+      gap: 1.2rem;
+      align-items: center;
+      color: $color-grey-2;
+    }
+  }
+}
+
+@include respond(xs) {
+  .article__modal {
+    z-index: 1300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    transform-origin: center center;
+
+    &::after,
+    &::before {
+      content: "";
+      position: fixed;
+      right: 4rem;
+      top: 2rem;
+      width: 0.25rem;
+      height: 3rem;
+      border-radius: 0.4rem;
+      background-color: $color-grey-1;
+      cursor: pointer;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    & .article__content {
+      padding: 3.2rem;
+      border-radius: 1.6rem;
+      background-color: $color-white;
+    }
+  }
+}

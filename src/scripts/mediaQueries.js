@@ -5,3 +5,7 @@ export function getViewportSize() {
   if (window.matchMedia("(max-width: 100em)").matches) return "lg";
   return "xl";
 }
+
+export function isMobile() {
+  return getViewportSize() === "xs"
+}
