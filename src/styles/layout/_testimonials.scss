@@ -9,10 +9,12 @@ $carousel-width: calc(($carousel-item-width * 3 + $carousel-gap * 2) / 16) * 10;
 .testimonials {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.3rem;
   text-align: center;
 
   & > .carousel-container {
+    margin-top: 2.7rem;
+
     & .carousel {
       position: absolute;
       left: 0;
@@ -23,6 +25,13 @@ $carousel-width: calc(($carousel-item-width * 3 + $carousel-gap * 2) / 16) * 10;
       display: flex;
       justify-content: flex-start;
 
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       @include respond($carousel-width) {
         justify-content: center;
       }
@@ -30,7 +39,8 @@ $carousel-width: calc(($carousel-item-width * 3 + $carousel-gap * 2) / 16) * 10;
       &__track {
         display: flex;
         flex-direction: row;
-        width: $carousel-width;
+        justify-content: center;
+        min-width: calc(100vw - $carousel-item-width * 1rem + $carousel-width * 1em);
         gap: $carousel-gap * 1rem;
         transition: 0.4s all ease-in-out;
       }
@@ -48,11 +58,12 @@ $carousel-width: calc(($carousel-item-width * 3 + $carousel-gap * 2) / 16) * 10;
           width: 100%;
           height: 43rem;
           object-fit: cover;
+          border-radius: 0.8rem;
         }
       }
 
       &__dots {
-        margin-top: calc($carousel-height + 3rem);
+        margin-top: $carousel-height;
         display: flex;
         justify-content: center;
         gap: 1.6rem;
