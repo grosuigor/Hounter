@@ -1,8 +1,6 @@
 import { getViewportSize } from "../../mediaQueries";
 import { ANIMATIONS } from "../../animations";
 
-const ANIMATION = ANIMATIONS.CAROUSEL
-
 const container = document.querySelector(".stats__container");
 const track = document.querySelector(".stats__track");
 
@@ -26,8 +24,8 @@ const createAnimation = () => {
     const gap = parseFloat(styles.gap) || 0;
 
     animation = track.animate(
-      ANIMATION.keyframes((track.scrollWidth + gap) / 2),
-      ANIMATION.config
+      ANIMATIONS.CAROUSEL.keyframes((track.scrollWidth + gap) / 2),
+      ANIMATIONS.CAROUSEL.config
     );
   } else {
     if (isDuplicated) {

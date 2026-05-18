@@ -3,7 +3,6 @@ import { cardTemplate } from "./cardTemplate";
 import { isMobile } from "../../mediaQueries";
 import { ANIMATIONS } from "../../animations";
 
-const ANIMATION = ANIMATIONS.FADE;
 const CARDS_PER_VIEWPORT = 3;
 
 const section = document.querySelector(".featured");
@@ -40,7 +39,7 @@ function updateCarouselPosition(forceInitPosition = false) {
 function setCarouselCards(category) {
   const cardsData = DATA[category];
 
-  const animation = carousel.animate(ANIMATION.keyframes, ANIMATION.config);
+  const animation = carousel.animate(ANIMATIONS.FADE.keyframes, ANIMATIONS.FADE.config);
 
   setTimeout(() => {
     carousel.innerHTML = cardsData.reduce(
@@ -48,7 +47,7 @@ function setCarouselCards(category) {
       "",
     );
     updateCarouselPosition(true);
-  }, ANIMATION.duration / 2);
+  }, ANIMATIONS.FADE.duration / 2);
 }
 
 function getMaxIndex() {
