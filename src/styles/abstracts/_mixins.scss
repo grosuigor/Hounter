@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "sass:meta";
+
 /*
 MEDIA QUERY MANAGER
 
@@ -8,20 +11,33 @@ MEDIA QUERY MANAGER
 1600 - 1728:    xl
 */
 
-@mixin respond($breakpoint) {
-    @if $breakpoint == xs {
-        @media only screen and (max-width: 65em) { @content };
-    }
-    @if $breakpoint == sm {
-        @media only screen and (max-width: 80em) { @content };
-    }
-    @if $breakpoint == md {
-        @media only screen and (max-width: 90em) { @content };
-    }
-    @if $breakpoint == lg {
-        @media only screen and (max-width: 100em) { @content };
-    }
+$breakpoints: (
+  xs: 65em,
+  sm: 80em,
+  md: 90em,
+  lg: 100em,
+  xl: 100em
+);
+
+@mixin respond($breakpoint, $type: min) {
+
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+
     @if $breakpoint == xl {
-        @media only screen and (min-width: 100em) { @content };
+      @media only screen and (min-width: $value) {
+        @content;
+      }
+    } @else {
+      @media only screen and (max-width: $value) {
+        @content;
+      }
     }
+  }
+
+  @else if meta.type-of($breakpoint) == number {
+    @media only screen and (#{$type}-width: calc($breakpoint * 1em)) {
+      @content;
+    }
+  }
 }

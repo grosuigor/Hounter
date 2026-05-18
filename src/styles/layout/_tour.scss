@@ -2,11 +2,9 @@
 
 .tour {
   & > .blob-container {
-    top: 162.5rem;
     right: 0;
 
     @include respond(xs) {
-      top: 229rem;
       left: 0;
       right: unset;
     }
@@ -16,6 +14,7 @@
       right: 2.5rem;
 
       @include respond(xs) {
+        top: 50rem;
         left: 3rem;
         right: unset;
       }
@@ -26,9 +25,8 @@
       right: 1.5rem;
 
       @include respond(xs) {
-        top: -18rem;
-        left: 53rem;
-        right: unset;
+        top: 48rem;
+        right: 3rem;
       }
     }
   }
@@ -84,6 +82,10 @@
       margin: 1.6rem 0;
       border-radius: 1px;
     }
+
+    & > .avatar > div {
+      flex: 1;
+    }
   }
 
   &__grid {
@@ -103,30 +105,6 @@
       flex-direction: row;
       align-items: center;
       gap: 1.6rem;
-    }
-  }
-
-  &__contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1.6rem;
-
-    & > img {
-      border-radius: 50%;
-      width: 5.6rem;
-      aspect-ratio: 1;
-    }
-
-    &-text {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 0.4rem;
-
-      & > .label {
-        color: $color-grey-2;
-      }
     }
   }
 
