@@ -1,4 +1,6 @@
 export function cardTemplate(category, i, { name, price, seller, location, label }) {
+  const trimmedName = name.length > 25 ? name.slice(0, 26).trim() + '...' : name
+
   return `<div class="card">
     <div class="card__image-container">
       <img src="./src/assets/featured/${category}/${i}.jpg" />
@@ -8,7 +10,7 @@ export function cardTemplate(category, i, { name, price, seller, location, label
       </div>
     </div>
     <div class="card__content">
-      <h3 class="h3">${name}</h3>
+      <h3 class="h3">${trimmedName}</h3>
       <h4 class="h4">$ ${price}</h4>
       <div class="avatar">
         <img src="./src/assets/featured/${category}/seller_${i}.jpg" />
