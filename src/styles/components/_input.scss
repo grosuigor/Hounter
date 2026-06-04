@@ -33,10 +33,14 @@
 .input::placeholder,
 textarea.input {
   font-family: inherit;
-  color: $color-grey-2;
+  color: $color-black;
   font-weight: $medium-font;
   font-size: 0.875 * $default-font-size;
   line-height: 2.4rem;
+}
+
+.input::placeholder {
+  color: $color-grey-2;
 }
 
 .select,
@@ -138,9 +142,10 @@ textarea.input {
     padding: 1.2rem 1.6rem;
     border: 0;
     cursor: pointer;
-    color: $color-black;
 
-    &:hover, &:focus, &:focus-visible {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       background-color: $color-primary-light;
     }
   }

@@ -354,10 +354,10 @@
       </section>
       <section class="section find-more">
         <div class="blob-container">
-          <svg style="background-color: #82FFE8" class="blob">
+          <svg style="background-color: #82ffe8" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
-          <svg style="background-color: #C8FF82" class="blob">
+          <svg style="background-color: #c8ff82" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
         </div>
@@ -396,7 +396,7 @@
               required
             />
             <div class="complex-input__adornment--end">
-              <button class="btn btn--filled submit-button" type="submit" >
+              <button class="btn btn--filled submit-button" type="submit">
                 Subscribe now
               </button>
             </div>
@@ -430,6 +430,7 @@
             class="input"
             autocomplete="given-name"
             placeholder="Your Name"
+            required
           />
           <label class="label" for="surname">Surname</label>
           <input
@@ -438,6 +439,7 @@
             class="input"
             autocomplete="family-name"
             placeholder="Your Surname"
+            required
           />
           <label class="label" for="education">Education</label>
           <div class="select complex-input__adornment">
@@ -446,11 +448,19 @@
               name="education"
               class="input input--complex"
               placeholder="Select One"
-            >
-            <div class="select__options">
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-controls="education-options"
+              required
+            />
+            <div id="education-options" class="select__options">
               <button type="button" class="select__option">High School</button>
-              <button type="button" class="select__option">Undergraduate Degree</button>
-              <button type="button" class="select__option">Postgraduate Degree</button>
+              <button type="button" class="select__option">
+                Undergraduate Degree
+              </button>
+              <button type="button" class="select__option">
+                Postgraduate Degree
+              </button>
             </div>
             <div class="complex-input__adornment--end">
               <svg class="icon icon--small">
@@ -473,13 +483,16 @@
           </div>
           <span></span>
           <div class="form__consent">
-            <input type="checkbox" class="input" />
+            <input type="checkbox" class="input" required />
             <span class="label">
               I give consent to the processing of my personal data given in the
               contact form above under the terms and conditions of Grid Dynamics
               Privacy Policy.
             </span>
           </div>
+          <button class="btn btn--filled submit-button" type="submit">
+            Join Now
+          </button>
         </form>
       </section>
       <footer class="section footer"></footer>
