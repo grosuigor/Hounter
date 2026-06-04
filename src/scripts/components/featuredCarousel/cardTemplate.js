@@ -3,9 +3,9 @@ export function cardTemplate(category, i, { name, price, seller, location, label
 
   return `<div class="card">
     <div class="card__image-container">
-      <img src="./src/assets/featured/${category}/${i}.jpg" />
+      <img src="./assets/featured/${category}/${i}.jpg" />
       <div class="card__image-label card__image-label--${label.type}">
-        <img src="./src/assets/icons/featured/${label.type}.svg" />
+        <img src="./assets/icons/featured/${label.type}.svg" />
         <span class="label">${label.text}</span>
       </div>
     </div>
@@ -13,7 +13,7 @@ export function cardTemplate(category, i, { name, price, seller, location, label
       <h3 class="h3">${trimmedName}</h3>
       <h4 class="h4">$ ${price}</h4>
       <div class="avatar">
-        <img src="./src/assets/featured/${category}/seller_${i}.jpg" />
+        <img src="./assets/featured/${category}/seller_${i}.jpg" />
         <div class="avatar__text">
           <span>${seller}</span>
           <span>${location}</span>
