@@ -22,7 +22,7 @@
   padding-left: 6.4rem;
 }
 
-.input--complex:has( + .complex-input__adornment--end) {
+.input--complex:has(+ .complex-input__adornment--end) {
   padding-right: 14rem;
 }
 
@@ -39,7 +39,8 @@
   width: 100%;
 
   & > .complex-input__adornment {
-    &--start, &--end {
+    &--start,
+    &--end {
       position: absolute;
       top: 0;
       height: 100%;
@@ -51,10 +52,16 @@
 
     &--start {
       left: 0;
+      margin-left: 2.4rem;
     }
 
     &--end {
       right: 0;
+
+      & > .btn {
+        align-self: stretch;
+        margin: 0.4rem;
+      }
     }
   }
 }
