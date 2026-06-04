@@ -383,7 +383,7 @@
             Subscribe For More Info<br />
             and update from Hounter
           </h2>
-          <div class="subscribe__email-input complex-input-container">
+          <form class="subscribe__email-input complex-input-container">
             <div class="complex-input__adornment--start">
               <img
                 src="/src/assets/icons/main.svg"
@@ -393,14 +393,17 @@
             <input
               placeholder="Your email here"
               name="search"
+              type="email"
               class="input input--complex"
+              value=""
+              required
             />
             <div class="complex-input__adornment--end">
-              <button class="btn btn--filled">
+              <button class="btn btn--filled submit-button" type="submit" >
                 Subscribe now
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
       <section class="section form"></section>
