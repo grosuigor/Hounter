@@ -6,19 +6,9 @@
   top: 0;
   width: 100%;
   display: flex;
+  align-items: flex-start;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    color: $color-black;
-    gap: 1rem;
-
-    & > h4 {
-      font-weight: $black-font;
-    }
-  }
 
   &__delimiter {
     flex: 1;
