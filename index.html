@@ -354,10 +354,10 @@
       </section>
       <section class="section find-more">
         <div class="blob-container">
-          <svg style="background-color: #82FFE8" class="blob">
+          <svg style="background-color: #82ffe8" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
-          <svg style="background-color: #C8FF82" class="blob">
+          <svg style="background-color: #c8ff82" class="blob">
             <use href="/src/assets/icons/blob.svg#blob"></use>
           </svg>
         </div>
@@ -385,10 +385,7 @@
           </h2>
           <form class="subscribe__email-input complex-input-container">
             <div class="complex-input__adornment--start">
-              <img
-                src="/src/assets/icons/main.svg"
-                class="icon icon--mail"
-              />
+              <img src="/src/assets/icons/main.svg" class="icon icon--mail" />
             </div>
             <input
               placeholder="Your email here"
@@ -399,17 +396,106 @@
               required
             />
             <div class="complex-input__adornment--end">
-              <button class="btn btn--filled submit-button" type="submit" >
+              <button class="btn btn--filled submit-button" type="submit">
                 Subscribe now
               </button>
             </div>
           </form>
         </div>
       </section>
-      <section class="section form"></section>
-      <!--
+      <section class="section form">
+        <div class="form__cta">
+          <h3 class="h3">Would you like to join?</h3>
+          <div class="form__cta-text">
+            <span class="text text--light">
+              Quickly get three quotes from these local that people love in
+              online reviews.
+            </span>
+            <div class="divider"></div>
+            <span class="text text--light">
+              Pick the whose estimate suits you best.
+            </span>
+            <div class="divider"></div>
+            <span class="text text--light">
+              We then make sure the work i done to your complete satisfaction.
+            </span>
+          </div>
+          <img src="/src/assets/form_cta.jpeg" />
+        </div>
+        <form>
+          <label class="label" for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            class="input"
+            autocomplete="given-name"
+            placeholder="Your Name"
+            required
+          />
+          <label class="label" for="surname">Surname</label>
+          <input
+            id="surname"
+            name="surname"
+            class="input"
+            autocomplete="family-name"
+            placeholder="Your Surname"
+            required
+          />
+          <label class="label" for="education">Education</label>
+          <div class="select complex-input__adornment">
+            <input
+              id="education"
+              name="education"
+              class="input input--complex"
+              placeholder="Select One"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-controls="education-options"
+              required
+            />
+            <div id="education-options" class="select__options">
+              <button type="button" class="select__option">High School</button>
+              <button type="button" class="select__option">
+                Undergraduate Degree
+              </button>
+              <button type="button" class="select__option">
+                Postgraduate Degree
+              </button>
+            </div>
+            <div class="complex-input__adornment--end">
+              <svg class="icon icon--small">
+                <use href="/src/assets/icons/chevron.svg#chevron-down"></use>
+              </svg>
+            </div>
+          </div>
+          <label class="label" for="message">Message</label>
+          <div class="textarea-container">
+            <textarea
+              id="message"
+              name="message"
+              class="input"
+              placeholder="Message"
+              maxlength="500"
+            ></textarea>
+            <span class="textarea-counter">
+              <span class="message-count">0</span>/500
+            </span>
+          </div>
+          <span></span>
+          <div class="form__consent">
+            <input type="checkbox" class="input" required />
+            <span class="label">
+              I give consent to the processing of my personal data given in the
+              contact form above under the terms and conditions of Grid Dynamics
+              Privacy Policy.
+            </span>
+          </div>
+          <button class="btn btn--filled submit-button" type="submit">
+            Join Now
+          </button>
+        </form>
+      </section>
       <footer class="section footer"></footer>
-      -->
     </div>
     <script type="module" src="/src/index.js"></script>
   </body>
