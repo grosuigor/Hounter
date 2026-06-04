@@ -1,11 +1,11 @@
 const MAX_PREVIEW_TITLE_LENGTH = 100
 
 function genericArticle({ index, author, title, titleClass, desc, timestamp }) {
-  return `<img src="/src/assets/find_more/article-${index}.jpg" />
+  return `<img src="./assets/find_more/article-${index}.jpg" />
   <div class="article__content">
     <div class="avatar">
       <div class="avatar__images">
-        <img src="/src/assets/find_more/author-${index}.jpg" />
+        <img src="./assets/find_more/author-${index}.jpg" />
       </div>
       <div class="avatar__text">
         <span class="text text--bold">${author}</span>
@@ -22,7 +22,7 @@ function genericArticle({ index, author, title, titleClass, desc, timestamp }) {
         : ""
     }
     <span class="label">
-      <img src="/src/assets/icons/time.svg" />
+      <img src="./assets/icons/time.svg" />
       ${timestamp}
     </span>
   </div>`;
